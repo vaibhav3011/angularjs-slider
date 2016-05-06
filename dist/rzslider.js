@@ -1,6 +1,6 @@
-/*! angularjs-slider - v2.13.0 - 
- (c) Rafal Zajac <rzajac@gmail.com>, Valentin Hervieu <valentin@hervieu.me>, Jussi Saarivirta <jusasi@gmail.com>, Angelin Sirbu <angelin.sirbu@gmail.com> - 
- https://github.com/angular-slider/angularjs-slider - 
+/*! angularjs-slider - v2.13.0 -
+ (c) Rafal Zajac <rzajac@gmail.com>, Valentin Hervieu <valentin@hervieu.me>, Jussi Saarivirta <jusasi@gmail.com>, Angelin Sirbu <angelin.sirbu@gmail.com> -
+ https://github.com/angular-slider/angularjs-slider -
  2016-04-24 */
 /*jslint unparam: true */
 /*global angular: false, console: false, define, module */
@@ -635,6 +635,9 @@
        * @returns {undefined}
        */
       initHandles: function() {
+        this.scope.min_slider_position = {
+          left : this.valueToOffset(this.scope.rzSliderModel)+'px'
+        };
         this.updateLowHandle(this.valueToOffset(this.scope.rzSliderModel));
 
         /*
