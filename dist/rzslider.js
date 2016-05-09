@@ -635,9 +635,11 @@
        * @returns {undefined}
        */
       initHandles: function() {
-        this.scope.min_slider_position = {
-          left : this.valueToOffset(this.scope.rzSliderModel)+'px'
-        };
+        if(!this.scope.min_slider_position) {
+          this.scope.min_slider_position = {
+            left: this.valueToOffset(this.scope.rzSliderModel) + 'px'
+          };
+        }
         this.updateLowHandle(this.valueToOffset(this.scope.rzSliderModel));
 
         /*
