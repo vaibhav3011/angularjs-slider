@@ -373,6 +373,10 @@
           self.unbindEvents();
           angular.element($window).off('resize', calcDimFn);
         });
+
+        this.scope.gbbLeft = {
+          'left': this.valueToOffset(this.scope.$parent.slider_prices.mid_price) + 'px'
+        };
       },
 
       /*
